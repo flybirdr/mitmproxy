@@ -8,6 +8,12 @@
 ## Unreleased: mitmproxy next
 
 
+- Add `emudhra_chain` option to choose which compromised eMudhra chain `--emudhra` signs with:
+  `ecc` terminates at `emSign ECC Root CA - G3` for clients with up-to-date trust stores,
+  `aaa` terminates at Sectigo's `AAA Certificate Services` root, which is found in many
+  older or frozen trust stores and expires on 2028-12-31.
+  ([#8501](https://github.com/mitmproxy/mitmproxy/pull/8501), @bapirex)
+
 ## 22 October 2026: mitmproxy 12.3.0
 
 - Add `--emudhra` and `--emudhra-old` options to sign TLS certificates with a compromised eMudhra intermediate CA key.
